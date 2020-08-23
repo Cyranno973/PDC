@@ -21,6 +21,11 @@ const pdc = document.querySelector('.pdc');
 
 pdc.addEventListener('click', function () {
 const sum = document.getElementById("sum").innerHTML = 0;
+click3 = 0;
+click4 = 0;
+
+sessionStorage.setItem("somme",0);
+
 });
 function sumClicks() {
  const sum = document.getElementById("sum").innerHTML = click3 + click4;
