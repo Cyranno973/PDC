@@ -13,9 +13,15 @@ pdc.addEventListener('click', reset);
 // si sessionstorage vide sum vaut 0  ou je recupere la valeur de sum dans le session storage
 if (recuperationSum === null) {
 	sum.innerHTML = 0;
+	sessionStorage.setItem("somme", sum.textContent);
+	recuperationSum = Number(sessionStorage.getItem("somme"));
+
+
 }
 else {
 	sum.innerHTML = recuperationSum;
+	sessionStorage.setItem("somme", sum.textContent);
+	recuperationSum = Number(sessionStorage.getItem("somme"));
 }
 
 sum.addEventListener('focusout', function () {
