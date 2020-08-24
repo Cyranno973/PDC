@@ -1,40 +1,58 @@
 
-var click3 = 0;
-function onClick3() {
-	click3 -= 1;
-	//document.getElementById("click3").innerHTML = click3;
-	sumClicks();
-};
-
-
-
-var click4 = 2;
-
-function onClick4() {
-	click4 += 1;
-	//document.getElementById("click4").innerHTML = click4;
-	sumClicks();
-};
-
-
+let nbrpax = 0;
 const pdc = document.querySelector('.pdc');
+const sum = document.getElementById("sum");
+let recuperationSum = sessionStorage.getItem("somme");
+let plusElt = document.getElementById('increment');
+let moinsElt = document.getElementById('decrement');
 
-pdc.addEventListener('click', function () {
-const sum = document.getElementById("sum").innerHTML = 0;
-click3 = 0;
-click4 = 0;
 
-sessionStorage.setItem("somme",0);
-
-});
-function sumClicks() {
- const sum = document.getElementById("sum").innerHTML = click3 + click4;
- sessionStorage.setItem("somme",sum);
-};
-var recuperationSum = sessionStorage.getItem("somme");
+plusElt.addEventListener('click', increment);
+moinsElt.addEventListener('click', decrement);
+pdc.addEventListener('click', reset);
+// si sessionstorage vide sum vaut 0  ou je recupere la valeur de sum dans le session storage
 if (recuperationSum === null) {
-const sum = document.getElementById("sum").innerHTML = 2;
-	
-} else {
-	const sum = document.getElementById("sum").innerHTML = recuperationSum;
+	sum.innerHTML = 0;
 }
+else {
+	sum.innerHTML = recuperationSum;
+}
+
+sum.addEventListener('focusout', function () {
+	sessionStorage.setItem("somme", sum.textContent);
+	recuperationSum = Number(sessionStorage.getItem("somme"));
+})
+
+function decrement() {
+	if (recuperationSum === null) {
+		sum.innerHTML = nbrpax-1;
+		sessionStorage.setItem("somme", sum.textContent);
+		recuperationSum = Number(sessionStorage.getItem("somme"));
+	} else {
+		sum.innerHTML = recuperationSum-1;
+		sessionStorage.setItem("somme", sum.innerHTML);
+		recuperationSum =  Number(sessionStorage.getItem("somme"));
+	}
+};
+
+function increment() {
+	if (recuperationSum === null) {
+		sum.innerHTML = nbrpax+1;
+		sessionStorage.setItem("somme", sum.innerHTML);
+		recuperationSum = Number(sessionStorage.getItem("somme"));
+	} else {
+		sum.innerHTML = recuperationSum + 1;
+		sessionStorage.setItem("somme", sum.innerHTML);
+		recuperationSum =  Number(sessionStorage.getItem("somme"));
+	}
+};
+
+function reset() {
+	sum.innerHTML = 0;
+	nbrpax = 0;
+	sessionStorage.setItem("somme", 0);
+	recuperationSum = Number(sessionStorage.getItem("somme"));
+};
+
+
+
