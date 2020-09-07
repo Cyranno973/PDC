@@ -62,3 +62,8 @@ function reset() {
 
 
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+        .register("/pdc/sw.js")
+        .then(() => console.log("registered service worker!"));
+}

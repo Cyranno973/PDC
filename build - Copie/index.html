@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang='fr'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#1976d2">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
     <link rel='stylesheet' href='style.css'>
     <title>Apli</title>
@@ -11,67 +14,68 @@
 
 <body>
     <div class="container">
-    <div class='appli'>
-        <div class='titre'>
-            <div class='pdc'><span>PDC</span></div>
-            <div class='colonnes'>
-                <div class=''></div>
-                <div class='zones'>ZONES </div>
-                <div class='pax'>NBRE DE PAX </div>
-                <div class='bebes'>BEBES </div>
-                <div class=''></div>
-            </div>
-        </div>
-        <div class='oa'>
-            <div class='oa-moins' id="decrement"><i class="fas fa-minus"></i> </div>
-            <div class='oa-zones'>OA </div>
-            <div class='oa-pax' contenteditable="true" id="sum"></div>
-            <div class='oa-bebes'>1 </div>
-            <div class='oa-plus' id="increment"><i class="fas fa-plus"></i> </div>
-        </div>
-        <div class='ob'>
-            <div class='ob-moins'><i class="fas fa-minus"></i></div>
-            <div class='ob-zones'>OB </div>
-            <div class='ob-pax'>2 </div>
-            <div class='ob-bebes'>1 </div>
-            <div class='ob-plus' ><i class="fas fa-plus"></i></div>
-        </div>
-        <div class='oa'>
-            <div class='oa-moins' id="click3" onclick="decrement()"><i class="fas fa-minus"></i> </div>
-            <div class='oa-zones'>OC </div>
-            <div class='oa-pax' id="sum">2 </div>
-            <div class='oa-bebes'>1 </div>
-            <div class='oa-plus' id="click4" onclick="increment()"><i class="fas fa-plus"></i> </div>
-        </div>
-        <div class='ob'>
-            <div class='ob-moins'><i class="fas fa-minus"></i></div>
-            <div class='ob-zones'>OD </div>
-            <div class='ob-pax'>2 </div>
-            <div class='ob-bebes'>1 </div>
-            <div class='ob-plus'><i class="fas fa-plus"></i></div>
-        </div>
-        <div class='section'>
-            <div class='colonnes-section'>
-                <div class=''></div>
-                <div class='zones'>TOTAL </div>
-                <div class='pax'>1 </div>
-                <div class='bebes'>0 </div>
-                <div class=''></div>
-            </div>
-        </div>
-        <footer>
-            <div class="container-footer">
-                <div class="pmr"><span>10</span> PMR</div>
-                <div class="rsc">
-                    <div class="r"><span>R</span> <span class="ndr color">2</span></div>
-                    <div class="s"><span>S</span> <span class="ndr color">2</span></div>
-                    <div class="c"><span>C</span> <span class="ndr color">2</span></div>
+        <div class='appli'>
+            <div class='titre'>
+                <div class='pdc'><span>PDC</span></div>
+                <div class='colonnes'>
+                    <div class=''></div>
+                    <div class='zones'>ZONES </div>
+                    <div class='pax'>NBRE DE PAX </div>
+                    <div class='bebes'>BEBES </div>
+                    <div class=''></div>
                 </div>
             </div>
-        </footer>
+            <div class='oa'>
+                <div class='oa-moins' id="decrement"><i class="fas fa-minus"></i> </div>
+                <div class='oa-zones'>OA </div>
+                <div class='oa-pax' contenteditable="true" id="sum"></div>
+                <div class='oa-bebes'>1 </div>
+                <div class='oa-plus' id="increment"><i class="fas fa-plus"></i> </div>
+            </div>
+            <div class='ob'>
+                <div class='ob-moins'><i class="fas fa-minus"></i></div>
+                <div class='ob-zones'>OB </div>
+                <div class='ob-pax'>2 </div>
+                <div class='ob-bebes'>1 </div>
+                <div class='ob-plus'><i class="fas fa-plus"></i></div>
+            </div>
+            <div class='oa'>
+                <div class='oa-moins' id="click3" onclick="decrement()"><i class="fas fa-minus"></i> </div>
+                <div class='oa-zones'>OC </div>
+                <div class='oa-pax' id="sum">2 </div>
+                <div class='oa-bebes'>1 </div>
+                <div class='oa-plus' id="click4" onclick="increment()"><i class="fas fa-plus"></i> </div>
+            </div>
+            <div class='ob'>
+                <div class='ob-moins'><i class="fas fa-minus"></i></div>
+                <div class='ob-zones'>OD </div>
+                <div class='ob-pax'>2 </div>
+                <div class='ob-bebes'>1 </div>
+                <div class='ob-plus'><i class="fas fa-plus"></i></div>
+            </div>
+            <div class='section'>
+                <div class='colonnes-section'>
+                    <div class=''></div>
+                    <div class='zones'>TOTAL </div>
+                    <div class='pax'>1 </div>
+                    <div class='bebes'>0 </div>
+                    <div class=''></div>
+                </div>
+            </div>
+            <footer>
+                <div class="container-footer">
+                    <div class="pmr"><span>10</span> PMR</div>
+                    <div class="rsc">
+                        <div class="r"><span>R</span> <span class="ndr color">2</span></div>
+                        <div class="s"><span>S</span> <span class="ndr color">2</span></div>
+                        <div class="c"><span>C</span> <span class="ndr color">2</span></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-</div>
-<script src='main.js'></script>
+    <script src='main.js'></script>
+    <script src='sw.js'></script>
 
 </body>
 
